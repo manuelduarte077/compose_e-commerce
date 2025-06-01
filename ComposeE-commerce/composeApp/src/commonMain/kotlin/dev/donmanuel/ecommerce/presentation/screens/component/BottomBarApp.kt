@@ -14,7 +14,7 @@ import dev.donmanuel.ecommerce.presentation.screens.Section
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun ButtonBase(
+fun BottomBarApp(
     items: List<Section>,
     currentSection: Section,
     onSectionSelected: (Section) -> Unit,

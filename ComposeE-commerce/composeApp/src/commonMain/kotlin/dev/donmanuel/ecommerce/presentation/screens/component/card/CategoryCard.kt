@@ -19,6 +19,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import composee_commerce.composeapp.generated.resources.Res
+import composee_commerce.composeapp.generated.resources.burgerking
 import dev.donmanuel.ecommerce.model.Category
 import org.jetbrains.compose.resources.painterResource
 
@@ -39,7 +41,8 @@ fun CategoryCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth(),
         ) {
-            val image: Painter = painterResource(category.categoryImage)
+            val image: Painter = painterResource(category.categoryImage ?: Res.drawable.burgerking)
+
             Image(
                 painter = image, contentDescription = "",
                 modifier = Modifier

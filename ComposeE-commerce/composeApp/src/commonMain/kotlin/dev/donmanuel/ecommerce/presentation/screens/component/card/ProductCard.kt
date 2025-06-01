@@ -16,10 +16,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import composee_commerce.composeapp.generated.resources.Res
+import composee_commerce.composeapp.generated.resources.burgerking
+import dev.donmanuel.ecommerce.model.Category
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 
@@ -27,8 +29,8 @@ import org.jetbrains.compose.resources.painterResource
 fun ProductCard(
     title: String,
     subtitle: String,
-    idImage: DrawableResource,
-    idIcon: ImageVector
+    idImage: DrawableResource?,
+    onItemClick: (Category) -> Unit
 ) {
     Card(
         modifier = Modifier
@@ -42,7 +44,9 @@ fun ProductCard(
         ) {
 
             Row(verticalAlignment = Alignment.CenterVertically) {
-                val image: Painter = painterResource(idImage)
+                val image: Painter = painterResource(
+                    idImage ?: Res.drawable.burgerking
+                )
 
                 Image(
                     painter = image, contentDescription = "",
@@ -63,9 +67,6 @@ fun ProductCard(
                     )
                 }
             }
-
-            TagCard(icon = idIcon)
-
         }
     }
 }

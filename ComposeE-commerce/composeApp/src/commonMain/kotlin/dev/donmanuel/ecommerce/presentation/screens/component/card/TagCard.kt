@@ -17,14 +17,12 @@ fun TagCard(tag: String = "", icon: ImageVector? = null) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primary
-        ),
-        shape = RoundedCornerShape(12.dp),
-        modifier = Modifier.padding(3.dp)
+        ), shape = RoundedCornerShape(12.dp), modifier = Modifier.padding(3.dp)
     ) {
         if (tag.isNotEmpty()) Text(
-            text = tag,
-            modifier = Modifier.padding(10.dp, 5.dp, 10.dp, 5.dp),
-            color = MaterialTheme.colorScheme.onPrimary
+            text = tag, modifier = Modifier.padding(
+                10.dp, 5.dp, 10.dp, 5.dp
+            ), color = MaterialTheme.colorScheme.onPrimary
         )
         else icon?.let {
             Icon(

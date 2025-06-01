@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -49,7 +50,7 @@ fun LoginScreen(naveController: NavController) {
                 text = "Contraseña", 
                 textValue = passwordValue, 
                 passwordVisible = passwordVisible,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             )
             Spacer(modifier = Modifier.padding(20.dp))
             ButtonBase(
@@ -61,7 +62,7 @@ fun LoginScreen(naveController: NavController) {
                         }
                     }
                 },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             )
             Spacer(modifier = Modifier.padding(5.dp))
             TextClick("No tienes una cuenta? Registrate", onClick = {

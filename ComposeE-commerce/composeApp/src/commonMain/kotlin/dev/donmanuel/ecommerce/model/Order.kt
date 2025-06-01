@@ -11,7 +11,7 @@ data class Order(
     val title: String = "",
     val total: Double = 0.0,
     val count: Int = 0,
-    val image: DrawableResource,
+    val image: DrawableResource? = null,
     val directory: String = "",
 ) {
     fun getOrders() = listOf(

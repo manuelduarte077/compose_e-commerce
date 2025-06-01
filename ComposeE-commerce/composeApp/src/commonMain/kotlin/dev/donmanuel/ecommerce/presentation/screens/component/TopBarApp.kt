@@ -29,19 +29,23 @@ fun TopBarApp(
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth().padding(bottom = 20.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 20.dp)
     ) {
         Column {
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleLarge.copy(
                     fontWeight = FontWeight.Bold
-                )
+                ),
+                color = MaterialTheme.colorScheme.primary
             )
             Spacer(modifier = Modifier.padding(8.dp))
             Text(
                 text = description,
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.primary
             )
         }
 

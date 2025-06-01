@@ -10,9 +10,9 @@ import composee_commerce.composeapp.generated.resources.sushi
 import org.jetbrains.compose.resources.DrawableResource
 
 data class Category(
-    val id: Int,
+    val id: Int = 0,
     val categoryName: String = "",
-    val categoryImage: DrawableResource
+    val categoryImage: DrawableResource? = null,
 ) {
     fun getCategories() = listOf(
         Category(
